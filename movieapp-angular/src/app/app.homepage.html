@@ -1,0 +1,36 @@
+<body class="container">
+    
+    <router-outlet></router-outlet>
+                  <div class="genre-selection"> 
+                    <label for="page">Page</label>
+                    <select name="page" [(ngModel)]="pageSelection" (change)="changePage()">
+                      <option *ngFor="let item of pageArray">
+                      {{item}}
+                      </option>
+                    </select>             
+                    <label for="genres">Genres</label>
+                    <select name="genres" [(ngModel)]="genreNumSelection" (change)="changeGenNum()">
+                        <option *ngFor="let genre of _genreArray">
+                          {{genre.id}} {{genre.name}}
+                        </option>
+                    </select>
+                  </div>
+    
+    
+                    <div class="card">
+                    <ul>
+                      
+                        <li *ngFor="let movie of _movieArray2">
+                          <poster [posterPath]="movie.poster_path"></poster>
+                          <br><br>
+                          <div class="title">
+                            Title: {{movie.title}} 
+                            <br><br>
+                            Summary: {{movie.overview}}
+                          </div>
+                        
+                        </li>
+                    </ul>
+                  </div>
+                  
+    </body>
