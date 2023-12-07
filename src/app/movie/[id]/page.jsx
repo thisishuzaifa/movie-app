@@ -11,7 +11,7 @@ export default function MovieDetails({ params }){
 
         const getMovie = async () => {
             const res = await fetch(
-                `https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.API_KEY}&language=en-US`
+                `https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`
             );
             const movie = await res.json();
             setMovie(movie);
