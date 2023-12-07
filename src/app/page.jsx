@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="container max-w-6xl mx-auto">
-      <h1 className="text-4xl font-semibold text-teal-600">Popular Movies</h1>
+      <h1 className="text-4xl text-center mt-8 mb-8 font-semibold text-teal-600">Popular Movies</h1>
       <div className="grid grid-cols-4 gap-6">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

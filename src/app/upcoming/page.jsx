@@ -23,7 +23,7 @@ export default function Page() {
 
     return (
     <div className="container mx-auto">
-    <h1 className="text-4xl mt-8 font-bold text-teal-400 text-center">Upcoming Movies</h1>
+    <h1 className="text-4xl mt-8 font-bold text-teal-400 mb-8 text-center">Upcoming Movies</h1>
       <div className="grid grid-cols-5 gap-4">
         {movies?.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
