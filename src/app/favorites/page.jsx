@@ -12,7 +12,7 @@ export default function Page() {
             for (let i = 0; i < localStorage.length; i++) {
                 const id = localStorage.key(i);
                 const res = await fetch(
-                    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US`
+                    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}&language=en-US`
                 );
                 const movie = await res.json();
                 movies.push(movie);
