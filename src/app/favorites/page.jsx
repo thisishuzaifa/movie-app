@@ -28,11 +28,15 @@ export default function Page() {
     return (
         <div className="container mx-auto">
             <h1 className="text-4xl mb-8 mt-8 font-bold text-teal-400 text-center">Favorites</h1>
-            <div className="grid grid-cols-5 gap-4">
-                {movies.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie} />
-                ))}
-            </div>
+            {movies.length === 0 ? (
+                <div className="text-2xl text-center text-yellow-500 mt-8 mb-8">Like some movies from the catalogue to view them here</div>
+            ) : (
+                <div className="grid grid-cols-5 gap-4">
+                    {movies.map((movie) => (
+                        <MovieCard key={movie.id} movie={movie} />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

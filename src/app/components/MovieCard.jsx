@@ -28,10 +28,10 @@ export default function MovieCard({ movie }){
                 </Link>
                 <div className="flex flex-row justify-center items-center">
                     <div className="flex flex-col justify-center items-center">
-                        <p className="text-md text-center mt-4">{movie.title}</p>
-                        <p className="text-md text-center mt-4">{movie.release_date}</p>
-                        <p className="text-md text-center mt-4">{movie.vote_average}</p>
-                        <button className="bg-teal-500 hover:bg-teal-700 text-white py-2 px-4 rounded" onClick={toggleLiked}>
+                        <p className="text-lg text-center mt-4">{movie.title}</p>
+                        <p className="text-lg text-center mt-4">{movie.release_date}</p>
+                        <p className="text-lg text-center mt-4">{movie.vote_average}</p>
+                        <button className="bg-teal-500 hover:bg-teal-700 text-white py-2 px-4 rounded mt-2 mb-2" onClick={toggleLiked}>
                         {liked ? 'Unlike' : 'Like'}
                     </button>
                     </div>
